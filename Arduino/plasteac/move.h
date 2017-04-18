@@ -24,6 +24,7 @@ void sync();  // defined in main file
 
 void nsync(unsigned int count)
 {
+  // Call count times sync
   while(count--)
     sync();
 }

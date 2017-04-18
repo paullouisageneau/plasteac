@@ -32,6 +32,7 @@ long bpm = 120L;
 
 void sync()
 {
+  // Given set BPM, delay until the next quarter of a beat
   static unsigned long lastMillis = 0;
   unsigned long duration = 60000L/(bpm*4);
   long leftMillis = lastMillis + duration - millis();
@@ -41,8 +42,12 @@ void sync()
 
 void setup()
 {
+  // Init serial
   Serial.begin(9600);
+
+  // Init legs
   initialize();
+
   delay(4000);
 }
 
