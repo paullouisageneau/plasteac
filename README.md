@@ -7,4 +7,4 @@ Read my blog article for more information:
 
 https://chapelierfou.org/2017/04/plasteac-a-dancing-teapot/
 
-![Plasteac](https://chapelierfou.org/files/teapot_dancing.gif)
+![Plasteac](https://chapelierfou.org/wp-content/uploads/2017/04/IMG_20170417_194630-825x510.jpg)
