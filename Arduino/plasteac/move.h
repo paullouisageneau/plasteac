@@ -28,18 +28,21 @@ void nsync(unsigned int count)
     sync();
 }
 
+// Move left leg
 void left(int hip, int foot)
 {
   servos[0].write(90 - (hip + leftHipOffset));
   servos[2].write(90 - (foot + leftFootOffset));
 }
 
+// Move right legs
 void right(int hip, int foot)
 {
   servos[1].write(90 - (hip + rightHipOffset));
   servos[3].write(90 - (foot + rightFootOffset));
 }
 
+// Initialize legs
 void initialize()
 {
   // Init servos
@@ -49,6 +52,8 @@ void initialize()
   left(0, 0);
   right(0, 0);
 }
+
+// -------- Moves --------
 
 void stand(int cycles)
 {

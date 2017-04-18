@@ -29,7 +29,7 @@ const int rightFootOffset = 10;
 // ------------- BPM -------------
 long bpm = 120L;
 
-#include "dance.h"
+#include "move.h"
 
 void sync()
 {
