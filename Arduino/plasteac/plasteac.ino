@@ -18,7 +18,6 @@
 
 // ---------- Pin setup ----------
 const int servoPins[4] = {5, 6, 9, 10};
-const int speakerPin = 3;
 
 // -------- Servo offsets --------
 const int leftHipOffset  = 5;
