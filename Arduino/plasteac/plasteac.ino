@@ -17,7 +17,7 @@
  */
 
 // ---------- Pin setup ----------
-const int servoPins[4] = {5, 6, 9, 10};
+const int servoPins[4] = {5, 6, 7, 8};
 
 // -------- Servo offsets --------
 const int leftHipOffset  = 5;
