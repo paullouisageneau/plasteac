@@ -35,7 +35,7 @@ void left(int hip, int foot)
   servos[2].write(90 - (foot + leftFootOffset));
 }
 
-// Move right legs
+// Move right leg
 void right(int hip, int foot)
 {
   servos[1].write(90 - (hip + rightHipOffset));
