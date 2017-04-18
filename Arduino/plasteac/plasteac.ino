@@ -43,7 +43,7 @@ void sync()
 void setup()
 {
   Serial.begin(9600);
-  init_dance();
+  initialize();
   delay(4000);
 }
 

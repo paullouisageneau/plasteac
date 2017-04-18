@@ -40,7 +40,7 @@ void right(int hip, int foot)
   servos[3].write(90 - (foot + rightFootOffset));
 }
 
-void init_dance()
+void initialize()
 {
   // Init servos
   for(int i = 0; i<4; ++i)
