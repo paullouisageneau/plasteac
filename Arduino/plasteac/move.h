@@ -32,8 +32,8 @@ void nsync(unsigned int count)
 // Move left leg
 void left(int hip, int foot)
 {
-  servos[0].write(90 - (hip + leftHipOffset));
-  servos[2].write(90 - (foot + leftFootOffset));
+  servos[0].write(90 + (hip + leftHipOffset));
+  servos[2].write(90 + (foot + leftFootOffset));
 }
 
 // Move right leg
