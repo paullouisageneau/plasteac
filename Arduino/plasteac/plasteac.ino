@@ -18,7 +18,7 @@
 
 // ---------- Pin setup ----------
 const int servoPins[4] = {5, 6, 7, 8};
-const int speakerPin = 3;	// connected a piezzo speaker
+const int speakerPin = 3;	// connected to a piezzo speaker
 
 // -------- Servo offsets --------
 const int leftHipOffset  = 5;
