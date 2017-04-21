@@ -35,40 +35,38 @@ void playMelody(const char *melody, bool looped = false)
 // Update current melody, must be called on each quarter of a beat
 void syncMelody()
 {
-  if(currentMelody)
+  if(!currentMelody)
+    return;
+
+  // Check for end of melody string
+  if(!currentMelody[0] || !currentMelody[1] || !currentMelody[2])
   {
-    // Check for end of melody string
-    if(!currentMelody[0] || !currentMelody[1] || !currentMelody[2])
-    {
-      currentMelody = currentMelodyLoop;
-      if(!currentMelody)
-        return;
-    }
-    
-    if(currentMelodyLeft) currentMelodyLeft--;
-    if(!currentMelodyLeft)
-    {
-      // Read note in melody string
-      unsigned char d = (unsigned char)currentMelody[0];
-      unsigned long duration = (d >= 0x41 ? d - 0x41 + 10 : d - 0x30);
-      unsigned char note = (unsigned char)currentMelody[1];
-      unsigned int octave = (unsigned char)currentMelody[2] - 0x30;
-
-      // 0 is interpreted as a whole note, or semibreve
-      if(duration == 0) duration = 16;
-      
-      // Update status
-      currentMelodyLeft = duration;
-      currentMelody+= 3;
-
-      // Play note
-      unsigned long unit = 60000L/(bpm*4);
-      unsigned int frequency = pitch(octave, note);
-      if(frequency) tone(speakerPin, frequency, duration*unit - unit/2);
-    }
+    currentMelody = currentMelodyLoop;
+    if(!currentMelody)
+      return;
   }
-  else {
+    
+  if(currentMelodyLeft) currentMelodyLeft--;
+  if(!currentMelodyLeft)
+  {
+    // Read note in melody string
+    unsigned char d = (unsigned char)currentMelody[0];
+    unsigned long duration = (d >= 0x41 ? d - 0x41 + 10 : d - 0x30);
+    unsigned char note = (unsigned char)currentMelody[1];
+    unsigned int octave = (unsigned char)currentMelody[2] - 0x30;
+
+    // 0 is interpreted as a whole note, or semibreve
+    if(duration == 0) duration = 16;
+      
+    // Update status
+    currentMelodyLeft = duration;
+    currentMelody+= 3;
+
+    // Play note
+    unsigned long unit = 60000L/(bpm*4);
+    unsigned int frequency = pitch(octave, note);
     noTone(speakerPin);
+    if(frequency) tone(speakerPin, frequency, duration*unit - unit/2);
   }
 }
 
