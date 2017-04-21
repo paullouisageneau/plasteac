@@ -52,8 +52,8 @@ void syncMelody()
   // Read note in the melody string
   unsigned char d = (unsigned char)currentMelody[0];
   unsigned int duration = (d >= 0x41 ? d - 0x41 + 10 : d - 0x30);
-  unsigned char note = (unsigned char)currentMelody[1];
   unsigned int octave = (unsigned char)currentMelody[2] - 0x30;
+  char note = currentMelody[1];
 
   // 0 is interpreted as a whole note, or semibreve
   if(duration == 0) duration = 16;

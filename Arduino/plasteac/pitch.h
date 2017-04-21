@@ -17,11 +17,11 @@
  */
 
 // Return frequency given octave number and note name
-unsigned int pitch(unsigned int octave, unsigned char note)
+unsigned int pitch(unsigned int octave, char note)
 {
   // Note names array
   static const unsigned int countNotes = 12;
-  static const unsigned char Notes[] = { 'C', 'c', 'D', 'd', 'E', 'F', 'f', 'G', 'g', 'A', 'a', 'B' };
+  static const char Notes[] = { 'C', 'c', 'D', 'd', 'E', 'F', 'f', 'G', 'g', 'A', 'a', 'B' };
 
   // Frequencies array
   static const unsigned int countFreqs = countNotes*7 + 4;
