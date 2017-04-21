@@ -49,9 +49,9 @@ void syncMelody()
     if(!currentMelody) return;
   }
 
-  // Read note in melody string
+  // Read note in the melody string
   unsigned char d = (unsigned char)currentMelody[0];
-  unsigned long duration = (d >= 0x41 ? d - 0x41 + 10 : d - 0x30);
+  unsigned int duration = (d >= 0x41 ? d - 0x41 + 10 : d - 0x30);
   unsigned char note = (unsigned char)currentMelody[1];
   unsigned int octave = (unsigned char)currentMelody[2] - 0x30;
 
@@ -68,7 +68,7 @@ void syncMelody()
   {
     unsigned long unit = 60000L/(bpm*4);
     noTone(speakerPin);
-    tone(speakerPin, frequency, duration*unit - unit/2);
+    tone(speakerPin, frequency, unit*duration - unit/2);
   }
 }
 
