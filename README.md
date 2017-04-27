@@ -7,7 +7,7 @@ Read my blog articles for more information:
 
 https://chapelierfou.org/2017/04/plasteac-a-dancing-teapot/
 
-https://chapelierfou.org/2017/04/playing-music-on-arduino/
+https://chapelierfou.org/2017/04/plasteac-enhancements/
 
 https://vimeo.com/214493309
 
