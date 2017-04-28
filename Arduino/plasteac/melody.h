@@ -27,9 +27,9 @@ unsigned int currentMelodyLeft = 0;	// sync calls left for current note
 void playMelody(const char *melody, bool looped = false)
 {
   currentMelody = melody;
+  currentMelodyLeft = 0;
   if(looped) currentMelodyLoop = melody;
   else currentMelodyLoop = NULL;
-  currentMelodyLeft = 0;
 }
 
 // Update current melody, must be called on each quarter of a beat
@@ -39,9 +39,12 @@ void syncMelody()
   if(!currentMelody) return;
 
   // Check if a note is playing
-  if(currentMelodyLeft) currentMelodyLeft--;
-  if(currentMelodyLeft) return;
-
+  if(currentMelodyLeft)
+  {
+    currentMelodyLeft--;
+    if(currentMelodyLeft) return;
+  }
+  
   // Check for end of the melody string
   if(!currentMelody[0] || !currentMelody[1] || !currentMelody[2])
   {
