@@ -44,7 +44,7 @@ void sync()
   if(leftMillis > 0) delay(leftMillis);
   lastMillis = millis();
   
-  // Update melody
+  // Update player
   player.sync(bpm);
 }
 
