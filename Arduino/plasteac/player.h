@@ -16,11 +16,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+// Melody player implementation
 class Player
 {
 public:
-  Player(void)
+  // Create the player for specified speaker pin
+  Player(int speakerPin)
   {
+    pin = speakerPin;
     current = NULL;
     next = NULL;
     left = 0;
@@ -80,12 +83,13 @@ public:
     if(frequency) 
     {
       unsigned long unit = 60000L/(bpm*4);
-      noTone(speakerPin);
-      tone(speakerPin, frequency, unit*duration - unit/2);
+      noTone(pin);
+      tone(pin, frequency, unit*duration - unit/2);
     }
   }
 
-private:  
+private:
+  int pin; 
   const char *current;
   const char *next;
   unsigned int left;  // sync calls left for current note

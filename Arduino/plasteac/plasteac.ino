@@ -32,7 +32,7 @@ const char *melody = "4E52B42C54D52C52B44A42A42C54E52D52C56B42C54D54E54C54A42A42
 #include "move.h"
 #include "player.h"
 
-Player player;
+Player player(speakerPin);
 long bpm = 120L;
 
 void sync()
