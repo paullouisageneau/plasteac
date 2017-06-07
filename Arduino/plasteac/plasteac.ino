@@ -26,17 +26,14 @@ const int rightHipOffset = 5;
 const int leftFootOffset  = 10;
 const int rightFootOffset = 10;
 
-// ------------- BPM -------------
-long bpm = 120L;
-
-// I'm a little teapot
-//const char melody[] = "4C42D44E42F46G46C56A46C56G46R06F44F42G46E46E46D44D42E46C46R07C52A44G42G46F46E46D46C46R0";
-
-// Tetris
-const char melody[] = "4E52B42C54D52C52B44A42A42C54E52D52C56B42C54D54E54C54A42A42A42B42C56D52F54A52G52F56E52C54E52D52C54B42B42C54D54E54C54A44A44R0";
+//const char *melody = "4C42D44E42F46G46C56A46C56G46R06F44F42G46E46E46D44D42E46C46R07C52A44G42G46F46E46D46C46R0"; // I'm a little teapot
+const char *melody = "4E52B42C54D52C52B44A42A42C54E52D52C56B42C54D54E54C54A42A42A42B42C56D52F54A52G52F56E52C54E52D52C54B42B42C54D54E54C54A44A44R0"; // Tetris
 
 #include "move.h"
-#include "melody.h"
+#include "player.h"
+
+Player player;
+long bpm = 120L;
 
 void sync()
 {
@@ -48,7 +45,7 @@ void sync()
   lastMillis = millis();
   
   // Update melody
-  syncMelody();
+  player.sync(bpm);
 }
 
 void setup()
@@ -64,13 +61,13 @@ void setup()
 
 void loop() 
 {
-  playMelody(melody, false);
+  player.play(melody);
   stand_rythm(2);
   side_left(2);
   hello_left(1);
   walk(2);
 
-  playMelody(melody, false);
+  player.play(melody);
   stand_rythm(2);
   side_right(2);
   hello_right(1);
