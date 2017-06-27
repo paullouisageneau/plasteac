@@ -81,9 +81,9 @@ void stand_rythm(int cycles)
 
 void walk(int cycles)
 {
-  const int a = 20;
+  const int a = 15;
   const int b = 60;
-  const int c = 25;
+  const int c = 15;
   
   while(cycles--)
   {
@@ -121,7 +121,7 @@ void walk(int cycles)
 
 void side_left(int cycles)
 {
-  const int a = 40;
+  const int a = 30;
   
   while(cycles--)
   {
@@ -149,7 +149,7 @@ void side_left(int cycles)
 
 void side_right(int cycles)
 {
-  const int a = 40;
+  const int a = 30;
   
   while(cycles--)
   {
@@ -177,9 +177,9 @@ void side_right(int cycles)
 
 void hello_left(int cycles)
 {
-  const int a = 20;
+  const int a = 15;
   const int b = 60;
-  const int c = 25;
+  const int c = 20;
 
   left(0, -b);
   right(0, a);
@@ -208,9 +208,9 @@ void hello_left(int cycles)
 
 void hello_right(int cycles)
 {
-  const int a = 20;
+  const int a = 15;
   const int b = 60;
-  const int c = 25;
+  const int c = 20;
 
   left(0, a);
   right(0, -b);
