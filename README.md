@@ -5,9 +5,9 @@ Refer to each subproject for license information.
 
 Read my blog articles for more information:
 
-https://chapelierfou.org/2017/04/plasteac-a-dancing-teapot/
+https://chapelierfou.org/blog/plasteac-a-dancing-teapot.html
 
-https://chapelierfou.org/2017/04/plasteac-enhancements/
+https://chapelierfou.org/blog/plasteac-enhancements.html
 
 https://vimeo.com/214493309
 
