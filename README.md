@@ -11,5 +11,5 @@ https://chapelierfou.org/2017/04/plasteac-enhancements/
 
 https://vimeo.com/214493309
 
-![Plasteac](https://chapelierfou.org/wp-content/uploads/2017/04/IMG_20170417_194630-825x510.jpg)
+![Plasteac](https://chapelierfou.org/blog/images/IMG_20170417_194630-small.jpg)
 
